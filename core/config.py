@@ -7,7 +7,7 @@ import os
 import json
 import logging
 from typing import Dict, Any, Optional
-from .database import DatabaseManager
+from core.database import DatabaseManager
 
 
 class ConfigManager:

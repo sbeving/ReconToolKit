@@ -16,13 +16,13 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal, QThread, pyqtSlot
 from PyQt5.QtGui import QFont, QIcon, QPixmap, QPalette, QColor
 
-from .dashboard import DashboardWidget
-from .module_tabs import ModuleTabsWidget
-from .results_viewer import ResultsViewerWidget
-from .settings_dialog import SettingsDialog
-from .about_dialog import AboutDialog
-from ..core.database import DatabaseManager
-from ..core.config import ConfigManager
+from gui.dashboard import DashboardWidget
+from gui.module_tabs import ModuleTabsWidget
+from gui.results_viewer import ResultsViewerWidget
+from gui.settings_dialog import SettingsDialog
+from gui.about_dialog import AboutDialog
+from core.database import DatabaseManager
+from core.config import ConfigManager
 
 
 class MainWindow(QMainWindow):
@@ -37,7 +37,6 @@ class MainWindow(QMainWindow):
             config_manager (ConfigManager): Configuration manager instance
         """
         super().__init__()
-        
         self.logger = logging.getLogger(__name__)
         self.db_manager = db_manager
         self.config_manager = config_manager

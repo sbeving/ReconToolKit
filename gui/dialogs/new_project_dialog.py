@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import Qt
 
-from ...core.database import DatabaseManager
+from core.database import DatabaseManager
 
 
 class NewProjectDialog(QDialog):

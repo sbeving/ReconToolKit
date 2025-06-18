@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import Qt
 
-from ..core.config import ConfigManager
+from core.config import ConfigManager
 
 
 class SettingsDialog(QDialog):
@@ -252,12 +252,19 @@ class SettingsDialog(QDialog):
         # Network settings
         self.timeout_spin.setValue(self.config_manager.get('request_timeout', 30))
         self.user_agent_edit.setText(self.config_manager.get('user_agent', 'ReconToolKit/1.0.0'))
-        
-        # Proxy settings
+          # Proxy settings
         proxy_enabled = self.config_manager.get('proxy_enabled', False)
         self.proxy_enabled_check.setChecked(proxy_enabled)
         self.proxy_host_edit.setText(self.config_manager.get('proxy_host', ''))
-        self.proxy_port_spin.setValue(int(self.config_manager.get('proxy_port', 8080)))
+        
+        # Handle proxy port safely
+        proxy_port = self.config_manager.get('proxy_port', '8080')
+        try:
+            proxy_port_int = int(proxy_port) if proxy_port else 8080
+        except ValueError:
+            proxy_port_int = 8080
+        self.proxy_port_spin.setValue(proxy_port_int)
+        
         self.proxy_username_edit.setText(self.config_manager.get('proxy_username', ''))
         self.proxy_password_edit.setText(self.config_manager.get('proxy_password', ''))
         

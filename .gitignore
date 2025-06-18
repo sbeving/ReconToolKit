@@ -3,3 +3,6 @@
 __pycache__/
 # Local configuration files
 *.env
+*.key
+*.log
+*.db

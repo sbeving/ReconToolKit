@@ -14,9 +14,12 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, pyqtSignal, QThread, pyqtSlot
 from PyQt5.QtGui import QFont
 
-from ..core.database import DatabaseManager
-from ..core.config import ConfigManager
-from ..modules.passive.domain_enumeration import DomainEnumerationModule
+from core.database import DatabaseManager
+from core.config import ConfigManager
+from modules.passive.domain_enumeration import DomainEnumerationModule
+from modules.active.port_scanner import PortScannerModule
+from modules.active.web_directory_enum import WebDirectoryEnumerationModule
+from modules.active.web_fuzzer import WebFuzzerModule
 
 
 class ModuleWidget(QWidget):
@@ -481,14 +484,13 @@ class ModuleTabsWidget(QTabWidget):
             config_manager: Configuration manager
         """
         super().__init__()
-        
         self.db_manager = db_manager
         self.config_manager = config_manager
         self.logger = logging.getLogger(__name__)
         
         self._init_modules()
         self._init_ui()
-    
+        
     def _init_modules(self):
         """Initialize available modules."""
         self.modules = {
@@ -497,7 +499,10 @@ class ModuleTabsWidget(QTabWidget):
                 # Add more passive modules here
             ],
             'active': [
-                # Add active modules here
+                PortScannerModule(),
+                WebDirectoryEnumerationModule(),
+                WebFuzzerModule(),
+                # Add more active modules here
             ],
             'utilities': [
                 # Add utility modules here

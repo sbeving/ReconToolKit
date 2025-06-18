@@ -14,7 +14,7 @@ from typing import Dict, Any, List, Optional
 from urllib.parse import urljoin, urlparse
 import time
 
-from ..base_module import BaseModule
+from modules.base_module import BaseModule
 
 
 class DomainEnumerationModule(BaseModule):

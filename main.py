@@ -52,15 +52,15 @@ def main():
     logger = setup_logging()
     
     try:
+        # Enable high DPI scaling before creating QApplication
+        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
+        QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
+        
         # Create QApplication
         app = QApplication(sys.argv)
         app.setApplicationName("ReconToolKit")
         app.setApplicationVersion("1.0.0")
         app.setOrganizationName("ReconToolKit Team")
-        
-        # Enable high DPI scaling
-        app.setAttribute(Qt.AA_EnableHighDpiScaling, True)
-        app.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
         
         # Initialize core components
         logger.info("Initializing database...")
@@ -92,5 +92,5 @@ if __name__ == "__main__":
         print("PyQt5 is not installed. Please install it using 'pip install PyQt5'.")
         sys.exit(1)
     main()
-    
+
 

@@ -16,8 +16,8 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, pyqtSignal, pyqtSlot
 from PyQt5.QtGui import QFont
 
-from ..core.database import DatabaseManager
-from ..core.config import ConfigManager
+from core.database import DatabaseManager
+from core.config import ConfigManager
 
 
 class ResultsViewerWidget(QWidget):

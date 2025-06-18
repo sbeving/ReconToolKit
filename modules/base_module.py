@@ -6,12 +6,12 @@ Provides common functionality for all reconnaissance modules.
 import logging
 import threading
 import time
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 from typing import Dict, Any, List, Optional, Callable
 from PyQt5.QtCore import QObject, pyqtSignal
 
 
-class BaseModule(QObject, ABC):
+class BaseModule(QObject):
     """Base class for all reconnaissance modules."""
     
     # Signals for progress updates

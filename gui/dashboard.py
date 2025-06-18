@@ -4,6 +4,7 @@ Displays project overview, recent scans, and quick statistics.
 """
 
 import logging
+import sqlite3
 from datetime import datetime, timedelta
 from typing import Dict, Any, List
 from PyQt5.QtWidgets import (
@@ -13,8 +14,8 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 from PyQt5.QtGui import QFont, QPalette
 
-from ..core.database import DatabaseManager
-from ..core.config import ConfigManager
+from core.database import DatabaseManager
+from core.config import ConfigManager
 
 
 class DashboardWidget(QWidget):
