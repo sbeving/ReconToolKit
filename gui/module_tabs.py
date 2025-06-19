@@ -17,9 +17,22 @@ from PyQt5.QtGui import QFont
 from core.database import DatabaseManager
 from core.config import ConfigManager
 from modules.passive.domain_enumeration import DomainEnumerationModule
+from modules.passive.email_intelligence import EmailIntelligenceModule
+from modules.passive.social_engineering_intel import SocialEngineeringIntelModule
 from modules.active.port_scanner import PortScannerModule
 from modules.active.web_directory_enum import WebDirectoryEnumerationModule
 from modules.active.web_fuzzer import WebFuzzerModule
+from modules.active.vulnerability_scanner import VulnerabilityScanner
+from modules.active.ssl_tls_analyzer import SSLTLSAnalyzer
+from modules.active.network_discovery import NetworkDiscoveryModule
+from modules.active.advanced_web_crawler import AdvancedWebCrawlerModule
+from modules.utilities.data_analyzer import DataAnalyzerModule
+from modules.utilities.session_manager import SessionManagerModule
+from modules.utilities.intelligence_aggregator import IntelligenceAggregatorModule
+from modules.utilities.api_integration import APIIntegrationModule
+from modules.utilities.advanced_report_generator import AdvancedReportGeneratorModule
+from modules.utilities.threat_modeling_simple import ThreatModelingModule
+from modules.utilities.continuous_monitoring_simple import ContinuousMonitoringModule
 
 
 class ModuleWidget(QWidget):
@@ -483,29 +496,42 @@ class ModuleTabsWidget(QTabWidget):
             db_manager: Database manager
             config_manager: Configuration manager
         """
-        super().__init__()
+        super().__init__()        
         self.db_manager = db_manager
         self.config_manager = config_manager
         self.logger = logging.getLogger(__name__)
         
         self._init_modules()
         self._init_ui()
-        
+    
     def _init_modules(self):
         """Initialize available modules."""
         self.modules = {
             'passive': [
                 DomainEnumerationModule(),
+                EmailIntelligenceModule(),
+                SocialEngineeringIntelModule(),
                 # Add more passive modules here
             ],
             'active': [
                 PortScannerModule(),
+                NetworkDiscoveryModule(),
                 WebDirectoryEnumerationModule(),
                 WebFuzzerModule(),
+                VulnerabilityScanner(),
+                SSLTLSAnalyzer(),
+                AdvancedWebCrawlerModule(),
                 # Add more active modules here
             ],
             'utilities': [
-                # Add utility modules here
+                DataAnalyzerModule(),
+                SessionManagerModule(),
+                IntelligenceAggregatorModule(),
+                APIIntegrationModule(),
+                AdvancedReportGeneratorModule(),
+                ThreatModelingModule(),
+                ContinuousMonitoringModule(),
+                # Add more utility modules here
             ]
         }
     

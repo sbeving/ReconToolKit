@@ -1,6 +1,6 @@
-# ReconToolKit: A Comprehensive OSINT & Reconnaissance Platform
+# ReconToolKit: Advanced OSINT & Reconnaissance Platform
 
-![ReconToolKit Logo](https://img.shields.io/badge/ReconToolKit-v1.0.0-blue.svg)
+![ReconToolKit Logo](https://img.shields.io/badge/ReconToolKit-v2.0.0-blue.svg)
 ![Python Version](https://img.shields.io/badge/python-3.7%2B-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -19,46 +19,77 @@ By using this tool, you agree to:
 
 ## 📋 Overview
 
-ReconToolKit is a powerful, modular, and user-friendly Open-Source Intelligence (OSINT) and network reconnaissance platform built in Python. It provides cybersecurity professionals, ethical hackers, and security researchers with a centralized platform to gather information efficiently and ethically.
+ReconToolKit is a comprehensive, enterprise-grade Open-Source Intelligence (OSINT) and network reconnaissance platform built in Python. This advanced version provides cybersecurity professionals, ethical hackers, security researchers, and organizations with a powerful centralized platform for sophisticated intelligence gathering, threat modeling, and continuous monitoring.
 
 ### 🌟 Key Features
 
-- **Modular Architecture**: Easy to extend with new reconnaissance modules
-- **Modern GUI**: Intuitive PyQt5-based interface with dark/light themes
-- **Passive OSINT**: Domain enumeration, WHOIS lookup, DNS analysis, subdomain discovery
-- **Active Reconnaissance**: Port scanning, directory enumeration (with proper authorization)
-- **Database Integration**: SQLite database for storing scan results and configurations
-- **Secure Storage**: Encrypted API key management for external services
-- **Export Capabilities**: Generate reports in JSON, HTML, and CSV formats
-- **Session Management**: Save and resume reconnaissance sessions
-- **Multi-threading**: Concurrent operations for improved performance
+#### Core Capabilities
+- **Advanced Modular Architecture**: Highly extensible with 15+ specialized reconnaissance modules
+- **Modern GUI**: Intuitive PyQt5-based interface with advanced visualization capabilities
+- **Enterprise Database**: Comprehensive SQLite integration with relationship mapping
+- **Secure Storage**: Military-grade encrypted storage for API keys and sensitive data
+- **Professional Reporting**: Multi-format reports (PDF, HTML, JSON, CSV, XML) with visualizations
 
-## 🏗️ Architecture
+#### Advanced Intelligence Modules
+- **Passive OSINT**: Domain enumeration, WHOIS analysis, DNS intelligence, subdomain discovery
+- **Active Reconnaissance**: Advanced port scanning, web crawling, vulnerability assessment
+- **Social Engineering Intelligence**: Social media analysis, employee intelligence, breach correlation
+- **Threat Modeling**: STRIDE methodology, attack surface analysis, risk assessment
+- **API Integrations**: Shodan, VirusTotal, Censys, HaveIBeenPwned, SecurityTrails
+
+#### Automation & Monitoring
+- **Session Management**: Advanced workflow orchestration and campaign management
+- **Continuous Monitoring**: Real-time alerting, change detection, threshold monitoring
+- **Data Analysis**: Statistical analysis, pattern recognition, ML-based insights
+- **Intelligence Aggregation**: Multi-source threat intelligence correlation
+
+## 🏗️ Advanced Architecture
 
 ```
 ReconToolKit/
 ├── main.py                 # Application entry point
 ├── requirements.txt        # Python dependencies
-├── README.md              # This file
+├── README.md              # Project documentation
+├── ADVANCED_MODULES.md    # Advanced modules documentation
 ├── core/                  # Core application components
-│   ├── database.py        # Database management
-│   └── config.py          # Configuration management
-├── gui/                   # Graphical user interface
+│   ├── database.py        # Advanced database management
+│   ├── config.py          # Configuration management
+│   ├── enhanced_config.py # Enhanced configuration system
+│   └── report_generator.py # Core reporting functionality
+├── gui/                   # Advanced graphical interface
 │   ├── main_window.py     # Main application window
-│   ├── dashboard.py       # Dashboard widget
-│   ├── module_tabs.py     # Module interface tabs
-│   ├── results_viewer.py  # Results viewing and management
-│   ├── settings_dialog.py # Settings configuration
-│   ├── about_dialog.py    # About dialog
-│   └── dialogs/           # Additional dialogs
-├── modules/               # Reconnaissance modules
-│   ├── base_module.py     # Base module class
+│   ├── dashboard.py       # Advanced dashboard with analytics
+│   ├── module_tabs.py     # Dynamic module interface
+│   ├── results_viewer.py  # Advanced results management
+│   ├── settings_dialog.py # Comprehensive settings
+│   ├── about_dialog.py    # About and version info
+│   └── dialogs/           # Specialized dialog components
+├── modules/               # Comprehensive module system
+│   ├── base_module.py     # Base module architecture
 │   ├── passive/           # Passive OSINT modules
+│   │   ├── domain_enumeration.py
+│   │   ├── email_intelligence.py
+│   │   └── social_engineering_intel.py
 │   ├── active/            # Active reconnaissance modules
-│   └── utilities/         # Utility modules
-├── wordlists/             # Wordlists for brute-forcing
-├── reports/               # Generated reports
-└── data/                  # Database and configuration files
+│   │   ├── port_scanner.py
+│   │   ├── advanced_web_crawler.py
+│   │   ├── web_directory_enum.py
+│   │   ├── web_fuzzer.py
+│   │   ├── vulnerability_scanner.py
+│   │   ├── ssl_tls_analyzer.py
+│   │   └── network_discovery.py
+│   └── utilities/         # Advanced utility modules
+│       ├── data_analyzer.py
+│       ├── session_manager.py
+│       ├── intelligence_aggregator.py
+│       ├── api_integration.py
+│       ├── advanced_report_generator.py
+│       ├── threat_modeling.py
+│       └── continuous_monitoring.py
+├── wordlists/             # Comprehensive wordlist collection
+├── reports/               # Generated reports and analytics
+├── logs/                  # Application and module logs
+└── data/                  # Database and configuration storage
 ```
 
 ## 🚀 Installation
@@ -147,35 +178,40 @@ ReconToolKit/
 #### Passive OSINT Modules
 
 - **Domain Enumeration**: Comprehensive domain analysis including WHOIS, DNS records, and subdomain discovery
-- **Email & People Search**: Email harvesting and social media profile discovery
-- **Website Analysis**: Technology detection and metadata extraction
-- **IP Geolocation**: Geographic and network information lookup
-- **Code Repository Search**: GitHub/GitLab reconnaissance
+- **Email Intelligence**: Email harvesting, validation, and breach correlation
+- **Social Engineering Intelligence**: Social media analysis, employee intelligence, and organization profiling
 
 #### Active Reconnaissance Modules
 
-- **Port Scanning**: TCP port discovery and service identification
-- **Directory Enumeration**: Web directory and file discovery
-- **Service Enumeration**: Detailed service version detection
+- **Port Scanner**: Advanced TCP/UDP port discovery with service identification
+- **Advanced Web Crawler**: Comprehensive website crawling with technology detection
+- **Web Directory Enumeration**: Intelligent directory and file discovery
+- **Web Fuzzer**: Parameter and input fuzzing capabilities
+- **Vulnerability Scanner**: Automated vulnerability detection and analysis
+- **SSL/TLS Analyzer**: Certificate and encryption configuration analysis
+- **Network Discovery**: Network topology mapping and device identification
 
-#### Utility Modules
+#### Advanced Utility Modules
 
-- **Results Viewer**: Advanced filtering and search capabilities
-- **Report Generator**: Comprehensive report creation
-- **Configuration Manager**: Settings and API key management
+- **Data Analyzer**: Statistical analysis, pattern recognition, and ML-based insights
+- **Session Manager**: Workflow orchestration and campaign management
+- **Intelligence Aggregator**: Multi-source threat intelligence correlation
+- **API Integration**: Unified access to Shodan, VirusTotal, Censys, HIBP, SecurityTrails
+- **Advanced Report Generator**: Professional reports with visualizations in multiple formats
+- **Threat Modeling**: STRIDE methodology, attack surface analysis, and risk assessment
+- **Continuous Monitoring**: Real-time alerting, change detection, and automated monitoring
 
-### API Integration
+### Advanced API Integration
 
-ReconToolKit supports integration with various external APIs:
+ReconToolKit provides enterprise-grade integration with premium intelligence sources:
 
-- **VirusTotal**: Domain and IP reputation checking
-- **Shodan**: Internet-connected device discovery
-- **Hunter.io**: Email discovery and verification
-- **GitHub API**: Code repository search
-- **SecurityTrails**: Historical DNS data
-- **Censys**: Internet scanning data
+- **Shodan**: Internet-connected device discovery and vulnerability intelligence
+- **VirusTotal**: Malware analysis, URL/domain reputation, and threat intelligence
+- **Censys**: Internet-wide scanning data and certificate transparency
+- **Have I Been Pwned**: Breach data correlation and password security analysis
+- **SecurityTrails**: Historical DNS data, subdomain intelligence, and IP monitoring
 
-Configure API keys in the Settings dialog under the "API Keys" tab.
+Configure API keys in the Settings dialog under the "API Keys" tab for enhanced capabilities.
 
 ## ⚙️ Configuration
 
